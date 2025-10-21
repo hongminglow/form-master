@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This repository demonstrates a small collection of advanced form components and example pages built with Next.js and React.
 
-## Getting Started
+## What this repo contains
 
-First, run the development server:
+- Example pages (in `src/app`):
 
-```bash
+  - `page.tsx` — basic demo/home page
+  - `page-react-hook-form-basic.tsx` — simple form using react-hook-form
+  - `page-react-hook-form-advanced.tsx` — advanced react-hook-form examples
+  - `page-tanstack-form-basic.tsx` — simple form using @tanstack/react-form
+  - `page-tanstack-form-advanced.tsx` — advanced tanstack form examples
+
+- Reusable components:
+  - `src/components/form/` — form building blocks: `FormBase.tsx`, `FormInput.tsx`, `FormSelect.tsx`, `FormCheckbox.tsx`, `FormTextarea.tsx`, `hooks.tsx`.
+  - `src/components/ui/` — small UI primitives (input, label, button, textarea, etc.) used by the form components.
+
+The goal is to provide composable, type-safe form components and examples you can copy into your own projects.
+
+## Quick start (local)
+
+Open a terminal in the project root and run (PowerShell / Windows):
+
+```powershell
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Notes:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- This project uses Next.js and React (see `package.json` for exact versions).
+- If you use CI, prefer `npm ci` to install exactly from the lockfile.
 
-## Learn More
+## Recommended workflow
 
-To learn more about Next.js, take a look at the following resources:
+- Keep the lockfile (`package-lock.json`, `yarn.lock` or `pnpm-lock.yaml`) committed to the repo so everyone (and CI) installs the same dependency tree.
+- Run `npm install` after pulling changes. If dependencies are out of sync, remove `node_modules` and run `npm install` (or run `npm ci` in CI).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions and bug reports are welcome. Open an issue or submit a PR that includes a short description and a runnable repro if possible.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is released under the terms in the `LICENSE` file.
